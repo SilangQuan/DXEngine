@@ -1,0 +1,34 @@
+////////////// 
+// TYPEDEFS // 
+//像素输入格式 
+////////////// 
+struct PixelInputType 
+{ 
+   float4 position : SV_POSITION; 
+   float4 color : COLOR; 
+};
+
+
+//////////////////////////////////////////////////////////////////////////////// 
+// Pixel Shader 
+//////////////////////////////////////////////////////////////////////////////// 
+//float4 ColorPixelShader(float4 position : SV_POSITION, float4 color : COLOR) : SV_TARGET 
+//{ 
+ //   return color; 
+//}
+
+float4 ColorPixelShader(PixelInputType input) : SV_TARGET
+{
+    return input.color;
+}
+
+///struct VOut
+//{
+//    float4 position : SV_POSITION;
+//    float4 color : COLOR;
+//};
+
+//float4 ColorPixelShader(float4 position : SV_POSITION, float4 color : COLOR) : SV_TARGET
+//{
+//    return color;
+//}
